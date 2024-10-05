@@ -276,6 +276,7 @@ img {
     align-items: center;
   }
   header #logo {
+    margin-top: 20px;
     margin-bottom: 10px;
   }
   main {

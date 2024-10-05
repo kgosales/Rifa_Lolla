@@ -21,7 +21,7 @@
     },
     {
         "id": 5,
-        "comprador": "Izenilce",
+        "comprador": "Izenilce Martins",
         "formaPagamento": ""
     },
     {
@@ -131,7 +131,7 @@
     },
     {
         "id": 27,
-        "comprador": "",
+        "comprador": "Izenildes Martins",
         "formaPagamento": ""
     },
     {
@@ -226,7 +226,7 @@
     },
     {
         "id": 46,
-        "comprador": "",
+        "comprador": "Raymundo Sales",
         "formaPagamento": ""
     },
     {
@@ -361,7 +361,7 @@
     },
     {
         "id": 73,
-        "comprador": "",
+        "comprador": "Raymundo Sales",
         "formaPagamento": ""
     },
     {
@@ -451,7 +451,7 @@
     },
     {
         "id": 91,
-        "comprador": "",
+        "comprador": "Izenildes Martins",
         "formaPagamento": ""
     },
     {
@@ -496,7 +496,7 @@
     },
     {
         "id": 100,
-        "comprador": "Izenilce",
+        "comprador": "Izenilce Martins",
         "formaPagamento": ""
     }
 ]

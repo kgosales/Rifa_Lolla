@@ -52,7 +52,22 @@
     <footer>
         <p>© 2024 Gabriel Sales. Todos os direitos reservados.</p>
     </footer>
-    <script src="scripts.js"></script>
+    <script>
+        const numeros = document.querySelector('#numeros');
+
+        fetch('numeros.json')
+            .then(response => response.json())
+            .then(data => {
+
+                data.forEach(n => {
+                    if (n.comprador != '') {
+                        numeros.innerHTML += `<div class="numero comprado flex-ac-jc"><p>${n.id}</p></div>`;
+                    } else {
+                        numeros.innerHTML += `<div class="numero flex-ac-jc"><p>${n.id}</p></div>`;
+                    }
+                });
+            });
+    </script>
 </body>
 
 </html>

@@ -112,7 +112,7 @@
     {
         "id": 23,
         "comprador": "Rosemeire Miranda",
-        "formaPagamento": ""
+        "formaPagamento": "Pix"
     },
     {
         "id": 24,
@@ -211,7 +211,7 @@
     },
     {
         "id": 43,
-        "comprador": "",
+        "comprador": "Cosmeli",
         "formaPagamento": ""
     },
     {
@@ -306,7 +306,7 @@
     },
     {
         "id": 62,
-        "comprador": "",
+        "comprador": "Cosmeli",
         "formaPagamento": ""
     },
     {
@@ -341,7 +341,7 @@
     },
     {
         "id": 69,
-        "comprador": "",
+        "comprador": "Cosmeli",
         "formaPagamento": ""
     },
     {
@@ -386,7 +386,7 @@
     },
     {
         "id": 78,
-        "comprador": "",
+        "comprador": "Cosmeli",
         "formaPagamento": ""
     },
     {
@@ -411,7 +411,7 @@
     },
     {
         "id": 83,
-        "comprador": "",
+        "comprador": "Cosmeli",
         "formaPagamento": ""
     },
     {
@@ -431,7 +431,7 @@
     },
     {
         "id": 87,
-        "comprador": "",
+        "comprador": "Lucas Rodrigues",
         "formaPagamento": ""
     },
     {

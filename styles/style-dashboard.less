@@ -4,10 +4,11 @@
 
 #dashboard {
     width: 100%;
-    height: 100%;
+    padding: 0 2%;
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-grow: 1;
 }
 
 #dados {
@@ -87,4 +88,24 @@
     flex-direction: column;
     align-items: center;
     gap: 20px;
+}
+
+@media screen and (max-width: 480px) {
+
+    html,
+    body {
+        height: 100%;
+    }
+
+    #dashboard {
+        flex-direction: column;
+
+        #dados {
+            width: 95%;
+        }
+
+        #compradores {
+            width: 95%;
+        }
+    }
 }

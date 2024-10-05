@@ -72,12 +72,12 @@
     {
         "id": 15,
         "comprador": "Luan Martins",
-        "formaPagamento": ""
+        "formaPagamento": "Pix"
     },
     {
         "id": 16,
         "comprador": "Luan Martins",
-        "formaPagamento": ""
+        "formaPagamento": "Pix"
     },
     {
         "id": 17,
@@ -251,7 +251,7 @@
     },
     {
         "id": 51,
-        "comprador": "",
+        "comprador": "Anna Motta",
         "formaPagamento": ""
     },
     {
@@ -381,7 +381,7 @@
     },
     {
         "id": 77,
-        "comprador": "",
+        "comprador": "Ney - DOM de Educar",
         "formaPagamento": ""
     },
     {

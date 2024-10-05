@@ -304,6 +304,9 @@ img {
   main #container-numeros {
     width: 90%;
   }
+  main #container-numeros #numeros .numero {
+    font-size: 14px;
+  }
   img {
     position: static;
     margin-bottom: 30px;

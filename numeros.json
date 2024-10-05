@@ -2,7 +2,7 @@
     {
         "id": 1,
         "comprador": "",
-        "tipoPagamento": ""
+        "formaPagamento": ""
     },
     {
         "id": 2,

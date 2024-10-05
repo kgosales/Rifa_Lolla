@@ -179,3 +179,70 @@ footer {
   align-items: center;
   justify-content: center;
 }
+#dados {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+#dados #quantidades {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+#dados #quantidades .quantidade-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#dados #quantidades .quantidade-box .quantidade {
+  width: 70px;
+  height: 70px;
+  font-size: 30px;
+  border-radius: 50%;
+  border: 3px solid var(--gray-color);
+  text-align: center;
+  line-height: 70px;
+}
+#dados #quantidades .quantidade-box .quantidade#quantidade-numeros-disponiveis {
+  background-color: var(--second-color);
+}
+#dados #quantidades .quantidade-box .quantidade#quantidade-numeros-comprados {
+  background-color: var(--acquired-color);
+  color: white;
+}
+#dados #pagamentos {
+  width: 100%;
+}
+#dados .grafico-progresso {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+#dados .grafico-progresso #barra-progresso {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#dados .grafico-progresso #barra-progresso #barra-progresso-dinheiro {
+  height: 20px;
+  background-color: var(--main-color);
+}
+#dados .grafico-progresso #barra-progresso #barra-progresso-pix {
+  height: 20px;
+  background-color: var(--acquired-color);
+}
+#compradores {
+  width: 100%;
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}

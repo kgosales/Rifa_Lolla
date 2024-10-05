@@ -23,9 +23,30 @@
     </header>
     <main id="dashboard">
         <div id="dados">
-            <div id="quantidade">
-                <div id="quantidade-numeros-disponiveis"></div>
-                <div id="quantidade-numeros-comprados"></div>
+            <div id="quantidades">
+                <div class="quantidade-box">
+                    <p class="quantidade" id="quantidade-numeros-disponiveis"></p>
+                    <h3>Disponíveis</h3>
+                </div>
+                <div class="quantidade-box">
+                    <p class="quantidade" id="quantidade-numeros-comprados"></p>
+                    <h3>Comprados</h3>
+                </div>
+            </div>
+            <div id="pagamentos">
+                <p>Faturamento: R$<span id="faturamento"></span></p>
+                <p>Lucro Previsto: R$<span id="lucro-previsto"></span></p>
+                <p>Lucro Real: R$<span id="lucro-real"></span></p>
+                <p>Pagos: <span id="pagos"></span></p>
+                
+                <div class="grafico-progresso">
+                    <p id="pagamentos-dinheiro"></p>
+                    <div id="barra-progresso">
+                        <div id="barra-progresso-dinheiro"></div>
+                        <div id="barra-progresso-pix"></div>
+                    </div>
+                    <p id="pagamentos-pix"></p>
+                </div>
             </div>
         </div>
         <div id="compradores"></div>

@@ -2,6 +2,7 @@ const numDisponiveis = document.querySelector('#quantidade-numeros-disponiveis')
 const numComprados = document.querySelector('#quantidade-numeros-comprados');
 const faturamento = document.querySelector('#faturamento');
 const lucroPrevisto = document.querySelector('#lucro-previsto');
+const lucroEfetivado = document.querySelector('#lucro-efetivado');
 const lucroReal = document.querySelector('#lucro-real');
 
 const numPagos = document.querySelector('#num-pagos');
@@ -27,6 +28,7 @@ fetch('numeros.json')
 
         faturamento.innerHTML = `R$${comprados.length * 20}`
         lucroPrevisto.innerHTML = `R$${(comprados.length * 20) - 250}`
+        lucroEfetivado.innerHTML = `R$${pagamentos.length * 20}`
         lucroReal.innerHTML = `R$${(pagamentos.length * 20) - 250}`
 
         numPagos.innerHTML = pagamentos.length

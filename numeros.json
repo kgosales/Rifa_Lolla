@@ -36,7 +36,7 @@
     },
     {
         "id": 8,
-        "comprador": "Adriele Chinha",
+        "comprador": "Adriele Miranda",
         "formaPagamento": ""
     },
     {
@@ -56,8 +56,8 @@
     },
     {
         "id": 12,
-        "comprador": "Adriele Chinha",
-        "formaPagamento": ""
+        "comprador": "Chinha",
+        "formaPagamento": "Pix"
     },
     {
         "id": 13,
@@ -121,7 +121,7 @@
     },
     {
         "id": 25,
-        "comprador": "",
+        "comprador": "Ademário de Jesus",
         "formaPagamento": ""
     },
     {
@@ -141,7 +141,7 @@
     },
     {
         "id": 29,
-        "comprador": "",
+        "comprador": "Paulo da Caçamba",
         "formaPagamento": ""
     },
     {
@@ -181,7 +181,7 @@
     },
     {
         "id": 37,
-        "comprador": "",
+        "comprador": "Joilson Bonfim",
         "formaPagamento": ""
     },
     {
@@ -257,16 +257,16 @@
     {
         "id": 52,
         "comprador": "Ester Miranda",
-        "formaPagamento": ""
+        "formaPagamento": "Pix"
     },
     {
         "id": 53,
         "comprador": "Ester Miranda",
-        "formaPagamento": ""
+        "formaPagamento": "Pix"
     },
     {
         "id": 54,
-        "comprador": "",
+        "comprador": "Ademário de Jesus",
         "formaPagamento": ""
     },
     {
@@ -426,7 +426,7 @@
     },
     {
         "id": 86,
-        "comprador": "",
+        "comprador": "Ademário de Jesus",
         "formaPagamento": ""
     },
     {

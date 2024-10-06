@@ -14,11 +14,6 @@
             <h1 id="rifa">Rifa</h1>
             <h1 id="lolla">da Lolla</h1>
         </div>
-        <div>
-            <div id="c1"></div>
-            <div id="c2"></div>
-            <div id="c3"></div>
-        </div>
         <h3>Beneficente</h3>
     </header>
     <main id="dashboard">
@@ -34,18 +29,44 @@
                 </div>
             </div>
             <div id="pagamentos">
-                <p>Faturamento: R$<span id="faturamento"></span></p>
-                <p>Lucro Previsto: R$<span id="lucro-previsto"></span></p>
-                <p>Lucro Real: R$<span id="lucro-real"></span></p>
-                <p>Pagos: <span id="pagos"></span></p>
-                
-                <div class="grafico-progresso">
-                    <p id="pagamentos-dinheiro"></p>
-                    <div id="barra-progresso">
-                        <div id="barra-progresso-dinheiro"></div>
-                        <div id="barra-progresso-pix"></div>
+                <h3>Faturamento: <span id="faturamento"></span></h3>
+                <h3>Lucro Previsto: <span id="lucro-previsto"></span></h3>
+                <h3>Lucro Real: <span id="lucro-real"></span></h3>
+
+                <div class="box-progresso">
+                    <h3>Pagamentos</h3>
+                    <div class="dados-progresso">
+                        <div class="info-progresso">
+                            <p class="num-progresso" id="num-pagos"></p>
+                            <p class="label">Pago</p>
+                        </div>
+                        <div class="barra-progresso">
+                            <div class="progresso" id="progresso-pagos"></div>
+                            <div class="progresso" id="progresso-not-pagos"></div>
+                        </div>
+                        <div class="info-progresso">
+                            <p class="num-progresso" id="num-not-pagos"></p>
+                            <p class="label">Ñ Pago</p>
+                        </div>
                     </div>
-                    <p id="pagamentos-pix"></p>
+                </div>
+
+                <div class="box-progresso">
+                    <h3>Tipo de Pagamento</h3>
+                    <div class="dados-progresso">
+                        <div class="info-progresso">
+                            <p class="num-progresso" id="num-pix"></p>
+                            <p class="label">Pix</p>
+                        </div>
+                        <div class="barra-progresso">
+                            <div class="progresso" id="progresso-pix"></div>
+                            <div class="progresso" id="progresso-dinheiro"></div>
+                        </div>
+                        <div class="info-progresso">
+                            <p class="num-progresso" id="num-dinheiro"></p>
+                            <p class="label">Din</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

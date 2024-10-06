@@ -6,8 +6,8 @@
     },
     {
         "id": 2,
-        "comprador": "",
-        "formaPagamento": ""
+        "comprador": "Roberto Peterson",
+        "formaPagamento": "Pix"
     },
     {
         "id": 3,
@@ -146,8 +146,8 @@
     },
     {
         "id": 30,
-        "comprador": "",
-        "formaPagamento": ""
+        "comprador": "Roberto Peterson",
+        "formaPagamento": "Pix"
     },
     {
         "id": 31,

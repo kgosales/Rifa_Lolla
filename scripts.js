@@ -3,13 +3,16 @@ const numComprados = document.querySelector('#quantidade-numeros-comprados');
 const faturamento = document.querySelector('#faturamento');
 const lucroPrevisto = document.querySelector('#lucro-previsto');
 const lucroReal = document.querySelector('#lucro-real');
-const numPagos = document.querySelector('#pagos');
 
-const pagamentosDinheiro = document.querySelector('#pagamentos-dinheiro');
-const pagamentosPix = document.querySelector('#pagamentos-pix');
+const numPagos = document.querySelector('#num-pagos');
+const numNotPagos = document.querySelector('#num-not-pagos');
+const progressoPagos = document.querySelector('#progresso-pagos');
+const progressoNotPagos = document.querySelector('#progresso-not-pagos');
 
-const barraPagamentoDinheiro = document.querySelector('#barra-progresso-dinheiro');
-const barraPagamentoPix = document.querySelector('#barra-progresso-pix');
+const pagamentosDinheiro = document.querySelector('#num-dinheiro');
+const pagamentosPix = document.querySelector('#num-pix');
+const progressoDinheiro = document.querySelector('#progresso-dinheiro');
+const progressoPix = document.querySelector('#progresso-pix');
 
 fetch('numeros.json')
     .then(response => response.json())
@@ -22,14 +25,19 @@ fetch('numeros.json')
 
         let pagamentos = comprados.filter(n => n.formaPagamento != '');
 
-        faturamento.innerHTML = comprados.length * 20
-        lucroPrevisto.innerHTML = (comprados.length * 20) - 250
-        lucroReal.innerHTML = (pagamentos.length * 20) - 250
+        faturamento.innerHTML = `R$${comprados.length * 20}`
+        lucroPrevisto.innerHTML = `R$${(comprados.length * 20) - 250}`
+        lucroReal.innerHTML = `R$${(pagamentos.length * 20) - 250}`
 
         numPagos.innerHTML = pagamentos.length
+        numNotPagos.innerHTML = comprados.length - pagamentos.length
+
+        progressoPagos.style.width = (pagamentos.length / comprados.length) * 100 + "%";
+        progressoNotPagos.style.width = ((comprados.length - pagamentos.length) / comprados.length) * 100 + "%";
+
         pagamentosDinheiro.innerHTML = pagamentos.filter(n => n.formaPagamento == 'Dinheiro').length
         pagamentosPix.innerHTML = pagamentos.filter(n => n.formaPagamento == 'Pix').length
 
-        barraPagamentoDinheiro.style.width = (pagamentos.filter(n => n.formaPagamento == 'Dinheiro').length / pagamentos.length) * 100 + "%";
-        barraPagamentoPix.style.width = (pagamentos.filter(n => n.formaPagamento == 'Pix').length / pagamentos.length) * 100 + "%";
+        progressoDinheiro.style.width = (pagamentos.filter(n => n.formaPagamento == 'Dinheiro').length / pagamentos.length) * 100 + "%";
+        progressoPix.style.width = (pagamentos.filter(n => n.formaPagamento == 'Pix').length / pagamentos.length) * 100 + "%";
     });

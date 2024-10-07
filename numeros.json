@@ -51,7 +51,7 @@
     },
     {
         "id": 11,
-        "comprador": "",
+        "comprador": "Advaldo - CEJ",
         "formaPagamento": ""
     },
     {
@@ -246,7 +246,7 @@
     },
     {
         "id": 50,
-        "comprador": "",
+        "comprador": "Raidalva - CEJ",
         "formaPagamento": ""
     },
     {
@@ -382,7 +382,7 @@
     {
         "id": 77,
         "comprador": "Ney - DOM de Educar",
-        "formaPagamento": ""
+        "formaPagamento": "Pix"
     },
     {
         "id": 78,

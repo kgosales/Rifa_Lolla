@@ -142,7 +142,7 @@
     {
         "id": 29,
         "comprador": "Paulo da Caçamba",
-        "formaPagamento": ""
+        "formaPagamento": "Pix"
     },
     {
         "id": 30,
@@ -357,7 +357,7 @@
     {
         "id": 72,
         "comprador": "Nereivaldo Martins",
-        "formaPagamento": ""
+        "formaPagamento": "Pix"
     },
     {
         "id": 73,
@@ -397,7 +397,7 @@
     {
         "id": 80,
         "comprador": "Júnior - DOM de Educar",
-        "formaPagamento": ""
+        "formaPagamento": "Pix"
     },
     {
         "id": 81,

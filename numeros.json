@@ -107,7 +107,7 @@
     {
         "id": 22,
         "comprador": "Dão - Nerivaldo",
-        "formaPagamento": ""
+        "formaPagamento": "Pix"
     },
     {
         "id": 23,
@@ -162,7 +162,7 @@
     {
         "id": 33,
         "comprador": "Daiana - Irmã Adriana",
-        "formaPagamento": ""
+        "formaPagamento": "Pix"
     },
     {
         "id": 34,
@@ -172,7 +172,7 @@
     {
         "id": 35,
         "comprador": "Dão - Nerivaldo",
-        "formaPagamento": ""
+        "formaPagamento": "Pix"
     },
     {
         "id": 36,
@@ -217,7 +217,7 @@
     {
         "id": 44,
         "comprador": "Adriana Evangelista",
-        "formaPagamento": ""
+        "formaPagamento": "Pix"
     },
     {
         "id": 45,
@@ -281,8 +281,8 @@
     },
     {
         "id": 57,
-        "comprador": "",
-        "formaPagamento": ""
+        "comprador": "Adriana Evangelista",
+        "formaPagamento": "Pix"
     },
     {
         "id": 58,
@@ -316,8 +316,8 @@
     },
     {
         "id": 64,
-        "comprador": "",
-        "formaPagamento": ""
+        "comprador": "Adriana Evangelista",
+        "formaPagamento": "Pix"
     },
     {
         "id": 65,
@@ -372,7 +372,7 @@
     {
         "id": 75,
         "comprador": "Daiana - Adriana",
-        "formaPagamento": ""
+        "formaPagamento": "Pix"
     },
     {
         "id": 76,

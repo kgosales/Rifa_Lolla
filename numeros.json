@@ -97,7 +97,7 @@
     {
         "id": 20,
         "comprador": "Moacy - CEJ",
-        "formaPagamento": ""
+        "formaPagamento": "Dinheiro"
     },
     {
         "id": 21,
@@ -161,7 +161,7 @@
     },
     {
         "id": 33,
-        "comprador": "",
+        "comprador": "Daiana - Irmã Adriana",
         "formaPagamento": ""
     },
     {
@@ -371,7 +371,7 @@
     },
     {
         "id": 75,
-        "comprador": "",
+        "comprador": "Daiana - Adriana",
         "formaPagamento": ""
     },
     {

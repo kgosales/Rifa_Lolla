@@ -22,7 +22,7 @@
     {
         "id": 5,
         "comprador": "Izenilce Martins",
-        "formaPagamento": ""
+        "formaPagamento": "Dinheiro"
     },
     {
         "id": 6,
@@ -122,7 +122,7 @@
     {
         "id": 25,
         "comprador": "Ademário de Jesus",
-        "formaPagamento": ""
+        "formaPagamento": "Dinheiro"
     },
     {
         "id": 26,
@@ -221,8 +221,8 @@
     },
     {
         "id": 45,
-        "comprador": "",
-        "formaPagamento": ""
+        "comprador": "David",
+        "formaPagamento": "Pix"
     },
     {
         "id": 46,
@@ -267,7 +267,7 @@
     {
         "id": 54,
         "comprador": "Ademário de Jesus",
-        "formaPagamento": ""
+        "formaPagamento": "Dinheiro"
     },
     {
         "id": 55,
@@ -427,7 +427,7 @@
     {
         "id": 86,
         "comprador": "Ademário de Jesus",
-        "formaPagamento": ""
+        "formaPagamento": "Dinheiro"
     },
     {
         "id": 87,
@@ -497,6 +497,6 @@
     {
         "id": 100,
         "comprador": "Izenilce Martins",
-        "formaPagamento": ""
+        "formaPagamento": "Dinheiro"
     }
 ]

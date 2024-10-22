@@ -15,6 +15,8 @@ const pagamentosPix = document.querySelector('#num-pix');
 const progressoDinheiro = document.querySelector('#progresso-dinheiro');
 const progressoPix = document.querySelector('#progresso-pix');
 
+const containerCompradores = document.querySelector('#container-compradores');
+
 fetch('numeros.json')
     .then(response => response.json())
     .then(data => {
@@ -42,4 +44,26 @@ fetch('numeros.json')
 
         progressoDinheiro.style.width = (pagamentos.filter(n => n.formaPagamento == 'Dinheiro').length / pagamentos.length) * 100 + "%";
         progressoPix.style.width = (pagamentos.filter(n => n.formaPagamento == 'Pix').length / pagamentos.length) * 100 + "%";
+
+        containerCompradores.innerHTML = '';
+        data.forEach(n => {
+            if (n.comprador != '') {
+
+                if (n.formaPagamento != '') {
+                    containerCompradores.innerHTML += `
+                    <div class="comprador pago flex-ac-jc">
+                        <p>${n.id}</p>
+                        <p>${n.comprador}</p>
+                        <p>${n.formaPagamento}</p>
+                    </div>`
+                } else {
+                    containerCompradores.innerHTML += `
+                    <div class="comprador flex-ac-jc">
+                        <p>${n.id}</p>
+                        <p>${n.comprador}</p>
+                        <p>${n.formaPagamento}</p>
+                    </div>`
+                }
+            }
+        });
     });

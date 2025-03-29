@@ -46,18 +46,17 @@
         <p>© 2024 Gabriel Sales. Todos os direitos reservados.</p>
     </footer>
     <script>
-        const numeros = document.querySelector('#numeros');
-
         fetch('numeros.json')
             .then(response => response.json())
-            .then(data => {
+            .then(numeros => {
 
-                data.forEach(n => {
-                    if (n.comprador != '') {
-                        numeros.innerHTML += `<div class="numero comprado flex-ac-jc"><p>${n.id}</p></div>`;
-                    } else {
-                        numeros.innerHTML += `<div class="numero flex-ac-jc"><p>${n.id}</p></div>`;
-                    }
+                const gridNumeros = document.querySelector('#numeros');
+
+                numeros.forEach(numero => {
+                    const div = document.createElement('div');
+                    div.className = `numero flex-ac-jc ${numero.comprador ? 'comprado' : ''}`;
+                    div.innerHTML = `<p>${numero.id}</p>`;
+                    gridNumeros.appendChild(div);
                 });
             });
     </script>

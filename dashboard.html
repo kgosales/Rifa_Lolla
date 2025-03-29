@@ -17,7 +17,7 @@
         <h3>Beneficente</h3>
     </header>
     <main id="dashboard">
-        <div id="dados">
+        <section id="dados">
             <div id="quantidades">
                 <div class="quantidade-box">
                     <p class="quantidade" id="quantidade-numeros-disponiveis"></p>
@@ -70,16 +70,26 @@
                     </div>
                 </div>
             </div>
-        </div>
-        <div id="compradores">
+        </section>
+        <section id="compradores">
             <h3>Compradores</h3>
+            <div>
+                <input type="radio" name="compradores" id="f-todos" onclick="">
+                <label for="compradores">Todos</label>
+                <input type="radio" name="compradores" id="f-comprados" onclick="">
+                <label for="compradores">Comprados</label>
+                <input type="radio" name="compradores" id="f-pagos" onclick="">
+                <label for="">Pagos</label>
+                <input type="radio" name="compradores" id="-f-nPagos" onclick="">
+                <label for="">Não Pagos</label>
+            </div>
             <div id="container-compradores"></div>
-        </div>
+        </section>
     </main>
     <footer>
         <p>© 2024 Gabriel Sales. Todos os direitos reservados.</p>
     </footer>
-    <script src="scripts.js"></script>
+    <script src="scripts.js" type="module"></script>
 </body>
 
 </html>

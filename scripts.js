@@ -1,69 +1,74 @@
-const numDisponiveis = document.querySelector('#quantidade-numeros-disponiveis');
-const numComprados = document.querySelector('#quantidade-numeros-comprados');
-const faturamento = document.querySelector('#faturamento');
-const lucroPrevisto = document.querySelector('#lucro-previsto');
-const lucroEfetivado = document.querySelector('#lucro-efetivado');
-const lucroReal = document.querySelector('#lucro-real');
+import Comprador from './Comprador.js';
+import Numeros from './Numeros.js';
+import Dashboard from './Dashboard.js';
 
-const numPagos = document.querySelector('#num-pagos');
-const numNotPagos = document.querySelector('#num-not-pagos');
-const progressoPagos = document.querySelector('#progresso-pagos');
-const progressoNotPagos = document.querySelector('#progresso-not-pagos');
-
-const pagamentosDinheiro = document.querySelector('#num-dinheiro');
-const pagamentosPix = document.querySelector('#num-pix');
-const progressoDinheiro = document.querySelector('#progresso-dinheiro');
-const progressoPix = document.querySelector('#progresso-pix');
-
-const containerCompradores = document.querySelector('#container-compradores');
+// const containerCompradores = document.querySelector('#container-compradores');
 
 fetch('numeros.json')
     .then(response => response.json())
     .then(data => {
 
-        let comprados = data.filter(n => n.comprador != '');
+        const numeros = new Numeros(data);
+        const dashboard = new Dashboard();
+        const comprador = new Comprador();
 
-        numDisponiveis.innerHTML = data.length - comprados.length;
-        numComprados.innerHTML = comprados.length;
+        const informacoes = [
+            { elemento: "#quantidade-numeros-disponiveis", dados: numeros.getQuantidadeDisponiveis() },
+            { elemento: "#quantidade-numeros-comprados", dados: numeros.getQuantidadeComprados() },
+            { elemento: "#faturamento", dados: `R$${numeros.getFaturamento()}` },
+            { elemento: "#lucro-previsto", dados: `R$${numeros.getLucroPrevisto()}` },
+            { elemento: "#lucro-efetivado", dados: `R$${numeros.getLucroEfetivado()}` },
+            { elemento: "#lucro-real", dados: `R$${numeros.getLucroReal()}` },
+            { elemento: "#num-pagos", dados: numeros.getQuantidadePagos() },
+            { elemento: "#num-not-pagos", dados: numeros.getQuantidadeNaoPagos() },
+            { elemento: "#num-dinheiro", dados: numeros.getQuantidadeMetodosPagamento('Dinheiro') },
+            { elemento: "#num-pix", dados: numeros.getQuantidadeMetodosPagamento('Pix') },
+        ]
 
-        let pagamentos = comprados.filter(n => n.formaPagamento != '');
+        const progressos = [
+            { elemento: "#progresso-pagos", progresso: numeros.getPorcentagemPagos() },
+            { elemento: "#progresso-not-pagos", progresso: numeros.getPorcentagemPagos(false) },
+            { elemento: "#progresso-dinheiro", progresso: numeros.getPorcentagemMetodosPagamento('Dinheiro') },
+            { elemento: "#progresso-pix", progresso: numeros.getPorcentagemMetodosPagamento('Pix') },
+        ];
 
-        faturamento.innerHTML = `R$${comprados.length * 20}`
-        lucroPrevisto.innerHTML = `R$${(comprados.length * 20) - 250}`
-        lucroEfetivado.innerHTML = `R$${pagamentos.length * 20}`
-        lucroReal.innerHTML = `R$${(pagamentos.length * 20) - 250}`
-
-        numPagos.innerHTML = pagamentos.length
-        numNotPagos.innerHTML = comprados.length - pagamentos.length
-
-        progressoPagos.style.width = (pagamentos.length / comprados.length) * 100 + "%";
-        progressoNotPagos.style.width = ((comprados.length - pagamentos.length) / comprados.length) * 100 + "%";
-
-        pagamentosDinheiro.innerHTML = pagamentos.filter(n => n.formaPagamento == 'Dinheiro').length
-        pagamentosPix.innerHTML = pagamentos.filter(n => n.formaPagamento == 'Pix').length
-
-        progressoDinheiro.style.width = (pagamentos.filter(n => n.formaPagamento == 'Dinheiro').length / pagamentos.length) * 100 + "%";
-        progressoPix.style.width = (pagamentos.filter(n => n.formaPagamento == 'Pix').length / pagamentos.length) * 100 + "%";
-
-        containerCompradores.innerHTML = '';
-        data.forEach(n => {
-            if (n.comprador != '') {
-
-                if (n.formaPagamento != '') {
-                    containerCompradores.innerHTML += `
-                    <div class="comprador pago flex-ac-jc">
-                        <p>${n.id}</p>
-                        <p>${n.comprador}</p>
-                        <p>${n.formaPagamento}</p>
-                    </div>`
-                } else {
-                    containerCompradores.innerHTML += `
-                    <div class="comprador flex-ac-jc">
-                        <p>${n.id}</p>
-                        <p>${n.comprador}</p>
-                        <p>${n.formaPagamento}</p>
-                    </div>`
-                }
-            }
+        informacoes.forEach(informacao => {
+            dashboard.setDados(informacao.elemento, informacao.dados);
         });
+
+        progressos.forEach(progresso => {
+            dashboard.setProgresso(progresso.elemento, progresso.progresso);
+        });
+
+        // numeros.getComprados().forEach(listaComprador => {
+        //     document.querySelector('#container-compradores').appendChild(comprador.montarCompradores(listaComprador.id, listaComprador.comprador, listaComprador.formaPagamento));
+        // });
+
+        let filtro = "NPagos"
+
+        switch (filtro) {
+            case "Todos":
+                numeros.getNumeros().forEach(numero => {
+                    document.querySelector('#container-compradores').appendChild(comprador.montarCompradores(numero.id, numero.comprador, numero.formaPagamento));
+                })
+                break;
+            case "Comprados":
+                numeros.getComprados().forEach(comprados => {
+                    document.querySelector('#container-compradores').appendChild(comprador.montarCompradores(comprados.id, comprados.comprador, comprados.formaPagamento));
+                })
+                break;
+            case "Pagos":
+                numeros.getPagos().forEach(pagos => {
+                    document.querySelector('#container-compradores').appendChild(comprador.montarCompradores(pagos.id, pagos.comprador, pagos.formaPagamento));
+                })
+                break;
+            case "NPagos":
+                numeros.getNaoPagos().forEach(naoPagos => {
+                    document.querySelector('#container-compradores').appendChild(comprador.montarCompradores(naoPagos.id, naoPagos.comprador, naoPagos.formaPagamento));
+                })
+                break;
+            default:
+                break;
+        }
+
     });
